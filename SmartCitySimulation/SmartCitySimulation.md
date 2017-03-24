@@ -43,7 +43,7 @@ Let us simulate the Smart City by first creating templates for each of the 5 dev
 ![N|Solid](3.png)
 
 
-**Step 2: Create Smart Trash Can template**
+#### Step 2: Create Smart Trash Can template
 
 Smart trash are spread all over Smart city, each emits the following status -
 1. GPS location
@@ -76,7 +76,7 @@ e.g. ``` smartcity/lens_5qfRXGLmMGhg6tWRxGnT90EsRxI/smarttrashcan001/state ```
 You can easily scale up the number of Smart Trash cans like this. Just change the Topic so that each is unique.
 
 
-**Step 3: Create Smart Parking spot template**
+#### Step 3: Create Smart Parking spot template
 Smart Parking spot devices are located all over cities in public as well as private lots. A typical Smart Parking spot device sends the following message parameters:
 1. GPS location of the parking spot
 2. Availability of parking
@@ -108,7 +108,7 @@ e.g. ``` smartcity/lens_9qfRXGLmMGhg6tWRxGnT90EsQx/smartparking001/state ```
 ![N|Solid](7.png)
 8. Click **Save** to create the *Smart Parking Spot* template.
 
-**Step 4: Create Smart Street light template**
+#### Step 4: Create Smart Street light template
 A Smart Street light sends the following information:
 1. GPS location of the street light
 2. Ambient light condition
@@ -139,7 +139,8 @@ e.g. ``` smartcity/lens_7qfRXGLmMGhg6tWRxGnT90EsPx/smartstreetlight001/state ```
 ![N|Solid](9.png)
 8. Click **Save** to create the *Smart Street light* template.
 
-**Step 5: Create Smart Traffic signal template**
+#### Step 5: Create Smart Traffic signal template
+
 A Smart Traffic signal sends the following attributes:
 1. GPS location of the traffic signal
 2. Traffic level
@@ -157,8 +158,8 @@ To create a device in Network Simulator:
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](10.png)
 6. Under Specify Message Contents, set the Topic to something like
- ```smartcity/<clientID>/smarttrafficsignal001/state```
-e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttrafficsignal001/state```
+ ``` smartcity/<clientID>/smarttrafficsignal001/state```
+e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttrafficsignal001/state ```
 7. Enable JSON. Put the message content in JSON format as :
 ```sh
 {
@@ -176,7 +177,7 @@ e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttrafficsignal001/state``
 ![N|Solid](11.png)
 8. Click **Save** to create the *Smart Traffic Signal* template.
 
-**Step 6: Create Smart Transportation template**
+#### Step 6: Create Smart Transportation template
 A Smart Transportation device sends the following data:
 1. Bus number
 2. GPS location of the transport
@@ -210,7 +211,7 @@ e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttransport001/state```
 ![N|Solid](13.png)
 8. Click **Save** to create the *Smart Transportation* template.
 
-**Step 7: Run the Network Simulator**
+#### Step 7: Run the Network Simulator
 Now that we have all our templates ready, we are going to simulate Smart City by simulating all these devices. This creates the exact real life use case condition where all these devices are publishing their status in real time. A mobile app can be developed to aggregate data and present in articulated form to make meaningful decisions. For the sake of simplicity, we will use a simple MQTT client called MQTTLens. 
 
 But first, let us simulate our Smart City using the powerful Network Simulator.
@@ -219,7 +220,7 @@ But first, let us simulate our Smart City using the powerful Network Simulator.
 3. One by one select the templates that we created above and click Start Generation to simulate the Smart City.
 ![N|Solid](14.png)
 
-**Step 8: Visualizing Smart City data**
+#### Step 8: Visualizing Smart City data
 To visualize the data sent by our Smart City network, we are going to subscribe to all the 5 topics in MQTTLens as so -
 1. Select the Connection, say, **IoTify Smart Street Light**
 2. Under *Subscribe*, enter the topic as set in the **SmartStreetLight001** template and click Subscribe button
