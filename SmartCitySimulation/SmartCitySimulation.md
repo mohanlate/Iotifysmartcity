@@ -57,8 +57,8 @@ To create a device in Network Simulator:
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](4.png)
 6. Under Specify Message Contents:
-Set the Topic to something like “smartcity/<clientID>/streetlight001/state”.
-e.g. “smartcity/lens_5qfRXGLmMGhg6tWRxGnT90EsRxI/streetlight001/state”
+Set the Topic to something like ```smartcity/<clientID>/smarttrashcan001/state```
+e.g. ``` smartcity/lens_5qfRXGLmMGhg6tWRxGnT90EsRxI/smarttrashcan001/state ```
 7. Enable JSON
 8. Put the message content in JSON format as :
 ```sh
@@ -91,8 +91,8 @@ To create a device in Network Simulator:
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](6.png)
 6. Under Specify Message Contents:
-Set the Topic to something like “smartcity/<clientID>/smartparking001/state”.
-e.g. “smartcity/lens_9qfRXGLmMGhg6tWRxGnT90EsQx/smartparking001/state”    
+Set the Topic to something like ``` smartcity/<clientID>/smartparking001/state ```
+e.g. ``` smartcity/lens_9qfRXGLmMGhg6tWRxGnT90EsQx/smartparking001/state ```    
 7. Enable JSON. Put the message content in JSON format as :
 ```sh
 {
@@ -122,9 +122,8 @@ To create a device in Network Simulator:
 4. Enter “iot.eclipse.org” as the Endpoint URL
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](8.png)
-6. Under Specify Message Contents, set the Topic to something like
- “smartcity/<clientID>/smartstreetlight001/state”.
-e.g. “smartcity/lens_7qfRXGLmMGhg6tWRxGnT90EsPx/smartstreetlight001/state”
+6. Under Specify Message Contents, set the Topic to something like ``` smartcity/<clientID>/smartstreetlight001/state ```
+e.g. ``` smartcity/lens_7qfRXGLmMGhg6tWRxGnT90EsPx/smartstreetlight001/state ```
 7. Enable JSON. Put the message content in JSON format as :
 ```sh
 {
@@ -158,8 +157,8 @@ To create a device in Network Simulator:
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](10.png)
 6. Under Specify Message Contents, set the Topic to something like
- “smartcity/<clientID>/smarttrafficsignal001/state”.
-e.g. “smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttrafficsignal001/state”
+ ```smartcity/<clientID>/smarttrafficsignal001/state```
+e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttrafficsignal001/state```
 7. Enable JSON. Put the message content in JSON format as :
 ```sh
 {
@@ -193,8 +192,8 @@ To create a device in Network Simulator:
 5. Set the ClientID with the one generated at the time of creating connection in MQTTLens. 
 ![N|Solid](12.png)
 6. Under Specify Message Contents, set the Topic to something like
- “smartcity/<clientID>/smarttransport001/state”.
-e.g. “smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttransport001/state”
+ ```smartcity/<clientID>/smarttransport001/state```
+e.g. ```smartcity/lens_5etRXGLmMGyt6tWRxGnT90EsRop/smarttransport001/state```
 7. Enable JSON. Put the message content in JSON format as :
 ```sh
 {
