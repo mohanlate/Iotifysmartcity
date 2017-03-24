@@ -21,16 +21,16 @@ A Smart Parking device is represented as a template in Network Simulator. [Signu
 Once, you sign in, we are going to create a template by defining the schema of the message of our Smart Parking device, scale it up to 5 devices and run the network simulation tool. But first, let us create an application in Losant and setup dashboard.
 
 
-**[1] Setting up Losant application :**
+#### [1] Setting up Losant application :
 [Losant](www.losant.com) is an IoT platform with various tools to manage IoT applications. We are going to use it to manage our simulated Parking Spot devices. If you don’t have an account at Losant, sign up [here](https://accounts.losant.com/create-account). 
 
-**Step 1: Create new application**
+#### Step 1: Create new application 
 After logging in, click on the **Applications** tab in the upper menu and then **Create Application**. In the new application screen, choose a name for your application (for example “SmartCity”):
 ![N|Solid](1.png)
 
 Click the **Create Application** button and you will be taken to the application home page. 
 
-**Step 2: Create a recipe for devices**
+#### Step 2: Create a recipe for devices 
 Our simulated Parking Spot devices will be defined in Losant by creating devices in the application. In order to facilitate the creation of multiple devices of the same type, Losant offers the possibility to create a recipe and instantiate devices from this recipe. 
 a. In the *Devices* section of the application home page, click the **Add** button
 b. In the *CREATE FROM RECIPE* section, click **Manage My Device Recipes** and then **Add Recipe**
@@ -54,7 +54,7 @@ f. Click **Save Recipe**.
 Now we can create multiple devices taking this recipe as starting point.
 
 
-**Step 3: Create devices from recipe**
+#### Step 3: Create devices from recipe 
 
 a. From the application homepage, select **Add Device** from the Devices drop down menu item, to add a new device. In the *CREATE FROM RECIPE* section select the recipe just created.
 ![N|Solid](5.png)
@@ -73,7 +73,7 @@ We just created the first device. Following the same procedure quickly create ot
 
 
 
-**Step 4: Create access key**
+#### Step 4: Create access key 
 
 Device can only connect to this application by providing authentication credentials. In Losant, these credentials are defined in the form of an access key and a corresponding access secret. A given access key can be shared by more than one device; in our application we are going to create a single access key which will be used by all Parking Spot devices.
 
@@ -89,9 +89,9 @@ Click **Create Access Key**; a popup widget will appear displaying the auto-gene
 
 Make sure to copy at least the access secret (since it won’t be recoverable if you lose it), then select “I have copied my access key and secret to a safe place.” and click Close Window. The newly created access key is now ready to use.
 
-**[2] Set up a Losant dashboard**
+#### [2] Set up a Losant dashboard 
 Losant allows creating personalized dashboards to display data coming from any device in a given application, and also to send commands to a device. We are going to create a dashboard to monitor the status of the 5 Parking Spot devices we created in the previous steps. We are also going to provide an interface for user to make data-driven decisions and “Reserve” a parking spot of his preference.
-**Step 1: Create Dashboard**
+#### Step 1: Create Dashboard 
 a. Click the **Dashboards** item in the top menu in the home page of your Losant account
 b. Click **Create Dashboard**
 c. Choose a name for your dashboard, for example “Parking Spot”
@@ -101,7 +101,7 @@ d. Click **Create Dashboard** at the bottom of the page.
 
 Now it’s time to define the contents of the dashboard. Since our Parking Spot devices will be sending location and garbage level data, we are going to display a map with the location of each parking spots, their availability status and the Humidity and Temperature conditions. We will also add Indication widget to displays status of all parking spots, and buttons to allow user to reserve the desired parking spot.
 
-**Step 2: Add a map**
+#### Step 2: Add a map 
 
 To add the map- 
 a. From the Dashboard, click **Add Block** 
@@ -139,7 +139,7 @@ The Humidity is ```{{format data.humidity}}``` and Temperature is ``` {{format d
 
 j. Click **Add Block** to add the map to the dashboard.
 
-**Step 3: Add Indicator blocks to indicate parking spot status**
+#### Step 3: Add Indicator blocks to indicate parking spot status 
 We are going to add Indicator blocks to indicate the parking status of all the parking spot devices. 
 
 a. Click **Add Block**, locate the INDICATOR block in the list of widgets and click its Customize button.
@@ -153,7 +153,7 @@ g. Click on **Add Condition**. For the ‘unavailable’ condition, we will use 
 
 This adds an Indicator for the “ParkingSpot001” device to our dashboard. Repeat the steps above to add similar Indicators for the other 4 Parking Spots. 
 
-**Step 4: Add Button blocks to Reserve a Parking Spot**
+#### Step 4: Add Button blocks to Reserve a Parking Spot 
 We are going to add buttons to enable user to reserve parking spot. On Clicking the button sends “Reserve” command. Let us add these buttons.
 a. Click **Add Block**, locate the INPUT CONTROLS BLOCK in the list of widgets and click on the Customize button
 b. Select the “SmartCity” application and enter Block header text as “Reserve my spot”
@@ -168,9 +168,9 @@ This adds a Button block for reserving Parking Spot 001. Similarly add buttons f
 
 This completes the creation and setting up of our Parking Spot Dashboard in Losant. Don’t worry if you do not see much happening at this stage. Next, we are going to use IoTify’s Network Simulation tool to start sending traffic this way.
 
-***[3] Setting up Network Simulator templates***
+#### [3] Setting up Network Simulator templates 
 But first, we need to create templates for each of the Parking Spot devices.
-**Step 1. Create new templates for each devices**
+#### Step 1. Create new templates for each devices 
 a. Click on **Create a new Template** in IoTIFY network simulator
 b. Enter a unique name to the template, say “Parking001”
 c. Select MQTT as network connection type
@@ -220,7 +220,7 @@ d. The location value in “Message Content” with “47.3758, 8.53853”,  “
 e. Set the value of the key “availability” for “Parking003” to 1, indicating it is available for reserve, and that of “Parking002”, “Parking004” and “Parking005” to 0, indicating these are unavailable for parking. 
 This will create the 5 templates for the 5 Parking Spot devices.
 
-**Step 2. Run the Network Simulator**
+#### Step 2. Run the Network Simulator 
 To run the Network Simulator :
 a. Click on **Network** link in the top bar
 b. Click **Simulate**. 
@@ -234,7 +234,7 @@ This will open the “Jobs” page where it lists all the simulation jobs along 
 Similarly, simulate the other 4 devices by selecting the respective templates and clicking on “Start Generation” button.
 ![N|Solid](19.png)
 
-**[4] Seeing it work in action**
+#### [4] Seeing it work in action 
 
 Now head over to the Losant Dashboard. 
 ![N|Solid](20.png)
@@ -255,6 +255,6 @@ iv. Clicking on the point displays that it is unavailable.
 
 Finding a vacant parking spot in the morning should not be so stressful anymore.
 
-Tell us what would you like to build with the help of IoTify?
+*Tell us what would you like to build with the help of IoTify?*
 
 
