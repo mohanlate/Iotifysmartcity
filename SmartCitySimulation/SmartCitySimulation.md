@@ -27,7 +27,7 @@ For the sake of simplicity, all our devices are going to publish their status to
 Once we create these templates and run the IoTify Network Simulator to simulate our Smart City, we will use a simple MQTT client called *MQTTLens* to inspect the data our Smart City emits. MQTTLens can be installed as a Chrome extension from Chrome web store.
 
 
-**Step 1: Installing MQTTLens** 
+#### Step 1: Installing MQTTLens 
 Let us install MQTTLens. In Chrome, you can install it as an extension by simply searching for it in the Chrome webstore at https://chrome.google.com/webstore/category/extensions?hl=en-US
 ![N|Solid](1.png)
 Once installed, we will create connections for each of the device to make things simple. To create a new connection in MQTTLens:
